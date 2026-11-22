@@ -12,17 +12,16 @@ public class Tests
     public void Setup()
     {
         driver = new ChromeDriver();
+        driver.Manage().Window.Maximize();
     }
 
     [Test]
     public void MoTrangChu_ThanhCong()
     {
-        driver.Navigate().GoToUrl("https://fpt.edu.vn");
+        driver.Navigate().GoToUrl("https://www.saucedemo.com/");
         Assert.That(driver.Title, Is.Not.Empty);
-        Thread.Sleep(3000);
-
+        
     }
-
 
     [TearDown]
     public void TearDown()
